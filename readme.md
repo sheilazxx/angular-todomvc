@@ -5,15 +5,34 @@
 ![](https://github.com/tastejs/todomvc-app-css/raw/master/screenshot.png)
 
 
-## Getting started
+##1.0 Base On TodoMVC Template
+*  This App is based on TodoMVC Template to that is editable
+*  you can use it to add your tasks、edit it and make thoese data persistence 
 
-- Read the [Application Specification](https://github.com/tastejs/todomvc/blob/master/app-spec.md) before touching the template.
+##2.0 Run the App
+- you can download or clone by git
+- you need Node environment to run it
+- this app dependencies Angular and Angular-Route,so you need install them by npm or bower or others CDN
+- if you are a programer you can learn Angular directives、Angular Controller And Service from this project
+- it based on model-view-controller design pattern.
 
-- Delete this file and rename `app-readme.md` to `readme.md` and fill it out.
+##3.0 Some Run Pictures
+![](http://i.imgur.com/ADeVRhl.png)
 
-- Clone this repo and install the dependencies with [npm](https://npmjs.com) by running: `npm install`.
+- add tasks
+
+![](http://i.imgur.com/QbPPcMf.png)
+
+- making  tasks complete
+
+![](http://i.imgur.com/n6bOwnW.png)
+
+- active tasks
 
 
-## License
+![](http://i.imgur.com/16apuez.png)
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" rel="dct:type">work</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://sindresorhus.com" property="cc:attributionName" rel="cc:attributionURL">TasteJS</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.
+- completed tasks
+![](http://i.imgur.com/2wSemgQ.png)
+
+![](http://i.imgur.com/GQEi54J.png)
