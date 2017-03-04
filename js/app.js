@@ -3,9 +3,20 @@
 
 	// Your starting point. Enjoy the ride!
 	//创建一个模块,作为主模块
-	var myApp = angular.module('myToDoMvc',[]);
+	var myApp = angular.module('myToDoMvc',['ngRoute','app.controller.mian']);
+
+	//配置路由
+	myApp.config(['$routeProvider', function($routeProvider) {
+		$routeProvider
+			.when('/:status?', {
+				controller: 'MainController',
+				templateUrl: 'main_template'
+			})
+			.otherwise({ redirectTo: '/' });
+	}]);
+
 	//注册一个主控制器
-	myApp.controller('MainController',['$scope', function ($scope) {
+	/*myApp.controller('MainController',['$scope','$location', function ($scope,$location) {
 		function getId(){
 			var id = Math.random();
 			for(var i=0;i<$scope.todos.length;i++){
@@ -99,6 +110,34 @@
 			isChecked = !isChecked;
 		}
 
-	}]);
+		//动态控制筛选状态
+		$scope.$location = $location;
+		//$scope.selector = {};
+		//console.log($scope.$location);
+		//该方法用于不断监视$scope对象的属性或者方法
+		$scope.$watch('$location.hash()', function (now,old) {
+			console.log(now);
+			switch(now){
+				case "/active":
+					$scope.selector = {completed:false};
+					break;
+				case "/completed":
+					$scope.selector = {completed:true};
+					break;
+				default:
+					$scope.selector = {};
+					break;
+			}
+		});
+
+		//由于filter提供给我们默认的是模糊过滤，需要自定义一个filter函数
+		$scope.customCompare = function (source,target) {
+			return source === target;
+		};
+
+
+
+
+	}]);*/
 
 })(angular);
